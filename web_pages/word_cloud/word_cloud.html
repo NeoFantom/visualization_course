@@ -1,0 +1,169 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src='https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js'></script>
+    <script src='../jss/echarts-wordcloud.js'></script>
+</head>
+<body>
+<style>
+            html, body, #main {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+
+</style>
+<div id='main'></div>
+<script>
+            var chart = echarts.init(document.getElementById('main'));
+
+            var option = {
+                tooltip: {},
+                series: [ {
+                    type: 'wordCloud',
+                    gridSize: 2,
+                    sizeRange: [12, 50],
+                    rotationRange: [-90, 90],
+                    shape: 'pentagon',
+                    width: 600,
+                    height: 400,
+                    drawOutOfBound: true,
+                    textStyle: {
+                        normal: {
+                            color: function () {
+                                return 'rgb(' + [
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160)
+                                ].join(',') + ')';
+                            }
+                        },
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowColor: '#333'
+                        }
+                    },
+                    data: [
+                        { name:'hightech.com', value:312 },
+                        { name:'hightech.net', value:1 },
+                        { name:'qq.com', value:2187 },
+                        { name:'sina.com', value:942 },
+                        { name:'foxmail.com', value:876 },
+                        { name:'sohu.com', value:928 },
+                        { name:'kmfd.com', value:1 },
+                        { name:'mail7.lietou-edm.com', value:1 },
+                        { name:'kuua.com', value:1 },
+                        { name:'foxconn.com', value:1 },
+                        { name:'mr007.com', value:1 },
+                        { name:'dafa888.com', value:2 },
+                        { name:'51fapiao.cn', value:1 },
+                        { name:'ctrip', value:1 },
+                        { name:'eisoo-news.com', value:1 },
+                        { name:'zhaopinmail.com', value:2 },
+                        { name:'fx-king.clu', value:1 },
+                        { name:'tiuo9.dieditrder.com', value:1 },
+                        { name:'mlmv.com', value:1 },
+                        { name:'iyzv.com', value:1 },
+                        { name:'info.szwgroup.com', value:1 },
+                        { name:'message.cmbchina.com', value:1 },
+                        { name:'yaho', value:1 },
+                        { name:'araak.com', value:1 },
+                        { name:'UYZ.jdxahu.com', value:1 },
+                        { name:'yahoo.co.jp', value:2 },
+                        { name:'sujrvla.net', value:1 },
+                        { name:'200656.com', value:3 },
+                        { name:'tbet.com', value:1 },
+                        { name:'naio.com', value:1 },
+                        { name:'book511.com.cn', value:3 },
+                        { name:'ruwy.com', value:1 },
+                        { name:'adfa.com', value:1 },
+                        { name:'recruit25.com', value:1 },
+                        { name:'qvez.com', value:2 },
+                        { name:'nttstore.net', value:1 },
+                        { name:'bitpress.com.cn', value:1 },
+                        { name:'huluyahoo.com', value:1 },
+                        { name:'yeah.net', value:6 },
+                        { name:'hxu.org', value:1 },
+                        { name:'012.net', value:1 },
+                        { name:'bjak.com', value:1 },
+                        { name:'combest.com.cn', value:1 },
+                        { name:'cski.com', value:1 },
+                        { name:'nclg.com.cn', value:1 },
+                        { name:'sulg.com', value:1 },
+                        { name:'kdjsk.com', value:1 },
+                        { name:'avl.com.cn', value:1 },
+                        { name:'163.com', value:7 },
+                        { name:'yxzi.com', value:1 },
+                        { name:'bann.com', value:1 },
+                        { name:'gbcfw.com', value:1 },
+                        { name:'hahaworld.com', value:1 },
+                        { name:'edm2.epicc.com.cn', value:1 },
+                        { name:'10mgmt.com', value:1 },
+                        { name:'itili.com', value:1 },
+                        { name:'trfp.com', value:1 },
+                        { name:'airportthai.com', value:1 },
+                        { name:'j', value:1 },
+                        { name:'hotmail.com', value:7 },
+                        { name:'mdja.com', value:1 },
+                        { name:'ugtd.com', value:1 },
+                        { name:'jd.com', value:1 },
+                        { name:'zjkemei.com', value:1 },
+                        { name:'163.net', value:3 },
+                        { name:'mngn.com', value:1 },
+                        { name:'51job.com', value:1 },
+                        { name:'msn.com', value:3 },
+                        { name:'yahoo.com.cn', value:4 },
+                        { name:'vypy.com', value:1 },
+                        { name:'126.com', value:6 },
+                        { name:'21cn.com', value:1 },
+                        { name:'ask.com', value:3 },
+                        { name:'gmail.com', value:5 },
+                        { name:'56.com', value:5 },
+                        { name:'xinhuanet.com', value:1 },
+                        { name:'sxjgjt.com.cn', value:1 },
+                        { name:'mut.com', value:1 },
+                        { name:'highpin.cn', value:1 },
+                        { name:'eyou.com', value:6 },
+                        { name:'3721.net', value:5 },
+                        { name:'013.net', value:1 },
+                        { name:'beitc.com', value:1 },
+                        { name:'comisys.net', value:1 },
+                        { name:'baidu.net', value:1 },
+                        { name:'tom.com', value:2 },
+                        { name:'lists4.ctrip.com', value:1 },
+                        { name:'0355.net', value:2 },
+                        { name:'200739.com', value:1 },
+                        { name:'uxox.com', value:1 },
+                        { name:'055communication.com', value:1 },
+                        { name:'each.net', value:1 },
+                        { name:'risonanet.com', value:1 },
+                        { name:'pchome.com.tw', value:1 },
+                        { name:'wldq.com', value:1 },
+                        { name:'asiaonline.net', value:1 },
+                        { name:'live.com', value:1 },
+                        { name:'mnb.', value:1 },
+                        { name:'c-c.com', value:1 },
+                        { name:'cpcw.com', value:1 },
+                        { name:'itavcn.info', value:1 },
+                        { name:'baymc.com', value:1 },
+                        { name:'fpg.m4.ntu.edu.tw', value:1 },
+                        { name:'aol.com', value:2 },
+                        { name:'wfkv.com', value:1 },
+                        { name:'oibxa.net', value:1 },
+                        { name:'263.net', value:2 },
+                        { name:'6925.com', value:1 },
+                        { name:'online.sh.cn', value:1 },
+                        { name:'ezubuy.com', value:1 },
+                        { name:'rezd.com', value:1 },
+                        {}
+                    ]
+                } ]
+            };
+
+            chart.setOption(option);
+
+            window.onresize = chart.resize;
+
+</script>
+</body>
+</html>
